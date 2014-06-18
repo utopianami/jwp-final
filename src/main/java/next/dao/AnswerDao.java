@@ -16,15 +16,20 @@ public class AnswerDao {
 	public void insert(Answer answer) throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
+		PreparedStatement pstmt2 = null;
 		try {
 			con = ConnectionManager.getConnection();
 			String sql = "INSERT INTO ANSWERS (writer, contents, createdDate, questionId) VALUES (?, ?, ?, ?)";
+			String updateCount = "UPDATE QUESTIONS SET countOfComment = countOfComment + 1";
 			pstmt = con.prepareStatement(sql);
+			pstmt2 = con.prepareStatement(updateCount);
 			pstmt.setString(1, answer.getWriter());
 			pstmt.setString(2, answer.getContents());
 			pstmt.setTimestamp(3, new Timestamp(answer.getTimeFromCreateDate()));
 			pstmt.setLong(4, answer.getQuestionId());
 			pstmt.executeUpdate();
+			pstmt2.executeUpdate();
+			
 		} finally {
 			if (pstmt != null) {
 				pstmt.close();
