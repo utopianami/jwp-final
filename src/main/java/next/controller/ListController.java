@@ -19,7 +19,7 @@ public class ListController implements Controller {
 		QuestionDao questionDao = new QuestionDao();
 		List<Question> questions;
 		
-		questions = questionDao.findAll();
+		questions = (List<Question>) questionDao.findAll();
 		request.setAttribute("questions", questions);
 		return "list.jsp";
 	}
