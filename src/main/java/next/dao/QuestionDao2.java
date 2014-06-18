@@ -11,7 +11,7 @@ import java.util.List;
 import next.model.Question;
 import next.support.db.ConnectionManager;
 
-public class QuestionDao {
+public class QuestionDao2 {
 
 	public void insert(Question question) throws SQLException {
 		Connection con = null;

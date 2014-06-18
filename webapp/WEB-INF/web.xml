@@ -28,10 +28,21 @@
 		<servlet-name>FrontController</servlet-name>
 		<servlet-class>core.mvc.FrontController</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>GetList</display-name>
+		<servlet-name>GetList</servlet-name>
+		<servlet-class>next.api.GetList</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>FrontController</servlet-name>
 		<url-pattern>*.next</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetList</servlet-name>
+		<url-pattern>/api/list.next</url-pattern>
 	</servlet-mapping>
 	
 	

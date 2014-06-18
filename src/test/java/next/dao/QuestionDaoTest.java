@@ -24,7 +24,7 @@ public class QuestionDaoTest {
 	@Test
 	public void crud() throws Exception {
 		Question expected = new Question("자바지기", "title", "contents");
-		QuestionDao dut = new QuestionDao();
+		QuestionDao2 dut = new QuestionDao2();
 		dut.insert(expected);
 		
 		List<Question> questions = dut.findAll();
