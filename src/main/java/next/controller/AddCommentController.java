@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import next.dao.AnswerDao;
-import next.dao.QuestionDao2;
 import next.model.Answer;
 import next.model.Question;
 import core.mvc.Controller;

@@ -16,6 +16,7 @@ public class RequestMapping {
 	private Map<String, Controller> mappings = new HashMap<String, Controller>();
 	
 	public void initMapping() {
+		System.out.println("maping");
 		mappings.put("/list.next", new ListController());
 		mappings.put("/show.next", new ShowController());
 		mappings.put("/api/addanswer.next", new AddCommentController());

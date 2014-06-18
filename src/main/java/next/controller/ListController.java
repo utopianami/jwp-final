@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import next.dao.QuestionDao;
-import next.dao.QuestionDao2;
 import next.model.Question;
 import core.mvc.Controller;
 
